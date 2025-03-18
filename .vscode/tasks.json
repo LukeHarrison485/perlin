@@ -1,0 +1,36 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc.exe build active file",
+			"command": "C:\\msys64\\mingw64\\bin\\gcc.exe",  // Use gcc instead of g++
+			"args": [
+				"-std=c99",  // Explicitly specify C99 standard
+				"-fdiagnostics-color=always",
+				"-g",
+				"${workspaceFolder}/src/main.c",
+				"${workspaceFolder}/src/glad.c",
+				"-o",
+				"${workspaceFolder}/bin/main.exe",
+				"-I${workspaceFolder}/include",
+				"-L${workspaceFolder}/glfw/lib-mingw-w64",
+				"-lglfw3",
+				"-lopengl32",
+				"-lgdi32",
+				"-pthread"
+			],
+			"options": {
+				"cwd": "C:\\msys64\\mingw64\\bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:\\msys64\\mingw64\\bin\\gcc.exe"
+		}
+	]
+}

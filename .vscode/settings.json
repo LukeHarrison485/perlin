@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "glfw3.h": "c",
+        "cglm.h": "c",
+        "stb_image.h": "c",
+        "stdio.h": "c",
+        "stdlib.h": "c",
+        "block.h": "c",
+        "camera.h": "c",
+        "texture.h": "c",
+        "lighting.h": "c"
+    }
+}
