@@ -95,7 +95,7 @@ static const float texCoords[6][2] = {
 
 bool isBlockVisible(int x, int y, int z, Chunk* chunk) {
     if (x < 0 || y < 0 || z < 0 || x >= CHUNK_SIZE || y >= CHUNK_SIZE || z >= CHUNK_SIZE) {
-        return false;
+        return true;
     }
     return chunk->blocks[x][y][z] == 0; //If this is an air block we can assume that the block face of it's neighboring block is visible during mesh creation
 }
