@@ -74,9 +74,9 @@ int main(void) {
 		fprintf(stderr, "Failed to alloctate chunk memory, Quiting!\n");
 		return -1;
 	}
-	int seed = time(NULL);
+	
 
-	generateTerrain(seed);
+	generateTerrain(time(NULL));
 
 	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED); 
 	textures[DIRT] = loadTexture("dirt.png");

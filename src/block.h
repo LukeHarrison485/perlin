@@ -32,6 +32,8 @@ typedef struct {
     pthread_mutex_t mutex;
 } Queue;
 
+Queue queue;
+/*
 Queue createQueue(int capacity) {
     Queue newQueue;
     newQueue.capacity = capacity;
@@ -62,6 +64,7 @@ Chunk* dequeue(Queue* queue) {
     pthread_mutex_unlock(queue->mutex);
     return chunk;
 }
+*/
 
 typedef enum {FRONT, BACK, LEFT, RIGHT, TOP, BOTTOM} Face;
 
@@ -184,5 +187,15 @@ void renderChunk(Chunk* chunk) {
 }
 
 void* terrainGenerationThread(void* vargp) {
-    
+    /* int seed = time(NULL);
+    for (int x = 0; x < renderDistance; x++) {
+		for (int z = 0; z < renderDistance; z++) {
+			Chunk newChunk; 
+			glm_vec3_copy((vec3){x * CHUNK_SIZE, 0, z * CHUNK_SIZE}, newChunk.pos);
+			createChunkData(&newChunk, seed);
+			createChunkMesh(&newChunk);
+			uploadChunkToGPU(&newChunk);
+			enqueue(&queue, &newChunk);
+		}
+	} */
 }

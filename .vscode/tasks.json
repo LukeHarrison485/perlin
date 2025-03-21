@@ -18,7 +18,8 @@
 				"-lglfw3",
 				"-lopengl32",
 				"-lgdi32",
-				"-pthread"
+				"-pthread",
+				"-static"
 			],
 			"options": {
 				"cwd": "C:\\msys64\\mingw64\\bin"
